@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea to Demo"
+  short_description: "Turn rough requirements into clear, interactive admin demos"
+  default_prompt: "Use $idea-to-demo to turn this product idea into a clean, runnable admin demo for early validation."
