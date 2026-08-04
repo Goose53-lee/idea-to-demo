@@ -32,6 +32,7 @@ Describe what the team can now see, operate, and decide.
 - Desktop viewport:
 - Narrow viewport:
 - Console/runtime:
+- Typography audit: representative computed sizes, line heights, normal-zoom readability, and any eligible 11px annotations:
 
 ## Files changed
 

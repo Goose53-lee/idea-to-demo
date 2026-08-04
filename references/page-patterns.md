@@ -2,6 +2,8 @@
 
 Use this reference when selecting or implementing common admin page structures.
 
+Apply the mandatory type hierarchy and component minimums in [ui-foundations.md](ui-foundations.md) to every pattern below. Density MUST come from column priority, grouping, disclosure, and responsive transformation rather than undersized text.
+
 ## Contents
 
 - Workbench and dashboard
@@ -60,6 +62,8 @@ Dangerous actions need confirmation. Batch actions should appear only after sele
 
 On narrow screens, replace wide tables with business cards containing the title, identifier or time, essential fields, state, key number, and main action.
 
+Keep table body text at 14px by default, table headers at 13–14px, and secondary fields, status tags, and row actions at 12px or larger. When columns do not fit, prioritize, wrap, disclose, or scroll before adjusting type.
+
 ## Details
 
 The detail header must answer:
@@ -97,6 +101,8 @@ Prefer one column for simple forms. Use two columns only when related fields rem
 Validate lightly during input, validate individual fields after blur, and validate the full form on submit. Place errors near the field and preserve entered content after failure. Scroll long forms to the first error.
 
 Use Cancel plus one primary action. Fix the action bar for long forms. Warn before leaving unsaved work.
+
+Keep input values and labels at 14px by default, validation and help text at 12px or larger, and button text within the component minimums. On mobile, prefer 16px input text and restructure the form instead of shrinking it.
 
 ## Authentication
 
