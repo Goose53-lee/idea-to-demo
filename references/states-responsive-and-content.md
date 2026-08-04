@@ -42,6 +42,8 @@ Do not clear user-entered content after a failed submission. Keep unaffected mod
 
 Do not implement mobile by shrinking the desktop canvas.
 
+Apply the mobile typography constraints in [ui-foundations.md](ui-foundations.md): body text defaults to 14–16px, inputs should be at least 16px, and text in touch targets must be at least 12px. Reflow and prioritize content instead of globally reducing font size.
+
 Use desktop for full management, batch operations, complex analysis, and configuration. Use mobile for quick viewing, lightweight processing, approval, field execution, and frequent creation.
 
 For narrow screens:
@@ -92,6 +94,7 @@ State clearly that mock data does not demonstrate API, database, permission, or 
 ## Accessibility and motion
 
 - Maintain sufficient text contrast.
+- Maintain the semantic font-size and line-height hierarchy defined in [ui-foundations.md](ui-foundations.md), including error, empty, loading, and disabled states.
 - Never communicate state through color alone.
 - Provide labels for form controls.
 - Keep keyboard paths logical.

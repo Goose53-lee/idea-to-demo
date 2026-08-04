@@ -18,8 +18,9 @@ Before changing an existing project:
 1. Read the nearest project instruction files.
 2. Inspect product and design documents.
 3. Inspect the package manager, scripts, routing, data layer, shared components, tokens, and active styles.
-4. Check the current Git state and preserve unrelated user changes.
-5. Run or inspect the real UI before making broad visual decisions when practical.
+4. Audit typography sources, including design tokens, CSS variables, component variants, Tailwind configuration, and arbitrary `text-[Npx]`, `text-xs`, font-size, and line-height usage.
+5. Check the current Git state and preserve unrelated user changes.
+6. Run or inspect the real UI before making broad visual decisions when practical.
 
 Prefer narrow changes that extend the current system. Do not replace the framework, component library, routing, or visual language without explicit scope and evidence.
 
@@ -77,6 +78,7 @@ Select checks proportionate to the demo and record the result.
 | States | scoped empty, loading, error, or pending behavior can be seen |
 | Responsive | representative desktop and narrow viewport checked |
 | Visual | screenshot or browser inspection confirms hierarchy and fit |
+| Typography | computed styles or equivalent inspection passes the readability audit in `ui-foundations.md` |
 | Console | no obvious uncaught errors on checked routes |
 | Repository | unrelated changes preserved and task boundary reported |
 
@@ -103,6 +105,9 @@ A build alone proves packaging, not product quality. Code inspection alone does 
 
 - Each main page has one clear visual center.
 - Typography, spacing, color, radius, borders, and icons are consistent.
+- Ordinary body, table, list, and form content defaults to 14px; component minimums and semantic line heights pass the mandatory typography audit.
+- No text is below 11px, and 11px is limited to genuinely non-essential annotations.
+- Layout pressure is resolved through information and layout decisions before any allowed font-size adjustment.
 - The UI is restrained, professional, and appropriately dense.
 - Images and charts carry information rather than decoration.
 

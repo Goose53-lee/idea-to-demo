@@ -2,9 +2,9 @@
 
 > 把模糊的产品想法，变成一个简洁、可操作、可以验证方向的后台 Demo。
 
-`idea-to-demo` 是一个面向 Codex 和兼容 Agent Skills 标准工具的 Skill。它帮助你从一句想法、初步需求、PRD、参考截图或现有前端项目出发，完成需求收敛、页面规划、后台 UI 设计、前端 Demo 实现与基础验证。
+`idea-to-demo` 是一个面向 Codex 和兼容 Agent Skills 标准工具的产品 Demo Skill。它帮助你从一句想法、初步需求、PRD、参考截图或现有前端项目出发，完成需求收敛、页面规划、后台 UI 设计、前端 Demo 实现与基础验证。
 
-它面向产品前期方案验证，不等同于生产开发交付。
+它适合 ERP、CRM、订单管理、运营平台、企业工作台、数据看板、列表、详情和表单等场景。目标是尽快做出可运行、可操作、可讨论的前端验证版本，而不是把交互原型包装成生产系统。
 
 ## 它会做什么
 
@@ -12,6 +12,7 @@
 - 把需求压缩成最小但完整的验证路径。
 - 规划工作台、列表、详情、表单和关键状态。
 - 生成简洁、专业、中高信息密度的后台 UI。
+- 强制建立清晰、易读的标题、正文和辅助文字层级。
 - 使用自洽的 Mock 数据完成主要交互。
 - 在代码任务中执行构建、浏览器与响应式检查。
 - 明确说明哪些部分是真实实现、模拟行为或生产阶段待办。
@@ -36,9 +37,43 @@ npx skills add Goose53-lee/idea-to-demo -g -y
 - 完整自动化测试、性能验证和监控；
 - CI/CD、部署与上线验收。
 
+## 字体可读性是强制约束
+
+当前版本把字体可读性纳入生成前检查、前端实现和最终验收，而不是只写成视觉建议：
+
+- 常规正文、表格、列表和表单默认使用 `14px`。
+- 普通界面文字不得小于 `12px`。
+- `11px` 只允许用于不影响核心任务的极次要注释。
+- 禁止使用小于 `11px` 的文字。
+- 禁止通过缩小字号解决布局问题；应优先调整信息分组、容器、换行、折叠、滚动或响应式结构。
+- 移动端正文默认 `14–16px`，输入框文字建议不小于 `16px`。
+- 输出前必须检查字号、行高、组件一致性与正常缩放下的实际可读性。
+
+完整规则见 [UI foundations](references/ui-foundations.md#mandatory-typography-and-readability)。
+
 ## 示例效果
 
-下面的退税通 ERP 页面展示了这个 Skill 希望达到的 Demo 水平：业务结构明确、视觉简洁、关键路径可以操作，同时不冒充已经完成的生产系统。
+下面展示同一个 Skill 在不同业务、页面结构和设备宽度下的输出方向。图片使用演示 Mock 数据，重点展示信息层级、状态、交互入口和响应式组织方式。
+
+### OrderFlow：全渠道订单管理
+
+桌面列表把异常提醒、核心指标、筛选和订单处理集中到一条可扫描路径中。正文与表格以 `14px` 为主，密度通过列优先级和布局控制，而不是压缩文字。
+
+![OrderFlow 订单管理桌面列表](assets/order-management-desktop.png)
+
+详情使用抽屉保留列表上下文，并把对象身份、履约状态、风险、收货信息、金额和订单动态组织成明确层级。
+
+![OrderFlow 订单详情抽屉](assets/order-management-detail.png)
+
+移动端不缩小桌面表格，而是重组为订单卡片、横向状态导航和底部主导航。
+
+<p align="center">
+  <img src="assets/order-management-mobile.png" alt="OrderFlow 移动端订单卡片" width="390" />
+</p>
+
+### 退税通 ERP：工作台、列表与详情
+
+退税通 ERP 案例展示工作台判断、业务列表扫描和对象详情处理三类常见后台结构。
 
 ### 工作台：帮助用户先判断，再查看数据
 
@@ -52,7 +87,7 @@ npx skills add Goose53-lee/idea-to-demo -g -y
 
 ![退税申请详情](assets/erp-refund-detail.png)
 
-> 图片中的数据为演示用 Mock 数据，仅用于说明信息层级、数据密度和状态流程。
+> 所有图片中的数据均为演示用 Mock 数据，仅用于说明信息层级、数据密度、状态流程与响应式策略。
 
 ## 手动安装
 
@@ -140,6 +175,9 @@ idea-to-demo/
 └── assets/
     ├── demo-brief.md
     ├── demo-handoff.md
+    ├── order-management-desktop.png
+    ├── order-management-detail.png
+    ├── order-management-mobile.png
     ├── erp-dashboard.png
     ├── erp-refund-list.png
     └── erp-refund-detail.png

@@ -76,6 +76,8 @@ Keep independent business states separate. A logistics state, payment state, app
 
 Build a simple, professional, medium-to-high-density admin interface. Use hierarchy, grouping, alignment, spacing, and typography before adding decoration.
 
+Before generating a UI proposal, image prompt, mockup, or code, classify every text role: page title, section title, group or card title, body or primary data, supporting text, and genuinely non-essential annotation. Confirm the target reading context: desktop, mobile, or distance-viewed data display. Treat the mandatory typography rules in [references/ui-foundations.md](references/ui-foundations.md) as an output constraint, not optional visual guidance.
+
 Avoid generic equal-card dashboards, excessive whitespace, large rounded containers, heavy shadows, decorative gradients, glass effects, meaningless charts, and images that carry no business information.
 
 Read [references/ui-foundations.md](references/ui-foundations.md) before defining tokens, layout, metrics, charts, or image usage. Read [references/page-patterns.md](references/page-patterns.md) for page-specific decisions.
@@ -107,6 +109,8 @@ When code is requested:
 - implement real local interactions instead of static screenshots or pseudocode;
 - make the main path clickable from beginning to end;
 - use semantic HTML and visible focus states;
+- reuse or establish semantic font-size and line-height tokens; do not scatter arbitrary small font values through components;
+- keep ordinary body, table, list, and form content at 14px by default, and solve density or fit problems through layout before considering any permitted font-size adjustment;
 - reorganize narrow-screen information instead of scaling down desktop tables;
 - avoid adding production infrastructure outside the agreed demo scope.
 
@@ -122,6 +126,8 @@ For code demos, verify:
 - production build;
 - the main interaction path in a browser;
 - relevant desktop and narrow viewports;
+- computed font sizes and line heights for representative titles, body text, tables, forms, buttons, cards, navigation, and supporting text;
+- no text below 11px, no broad use of 11px, and no use of 12px as the default for primary readable content unless the user explicitly required it;
 - empty or error behavior included in the scope;
 - obvious console and runtime failures;
 - absence of accidental changes outside the task.
@@ -156,6 +162,10 @@ Never describe an interactive prototype as a launch-ready product.
 - Give every failure state a recovery path.
 - Use business meaning, not color alone, to communicate status.
 - Keep page structure responsive to the primary task instead of forcing one dashboard template everywhere.
+- MUST keep ordinary body, table, list, and form content at 14px by default. Ordinary interface text MUST NOT be smaller than 12px; 11px is reserved for genuinely non-essential annotations; text below 11px is forbidden.
+- MUST NOT solve layout pressure by shrinking text. Adjust information, grouping, dimensions, spacing, wrapping, disclosure, scrolling, or responsive structure first.
+- MUST establish a clear title, body, and supporting-text hierarchy, and MUST complete the typography readability audit in [references/ui-foundations.md](references/ui-foundations.md) before final output.
+- MUST NOT generate a small-type-led, high-density interface unless the user explicitly requests it.
 - Preserve unrelated user work in existing repositories.
 - Distinguish clearly between demo acceptance and production readiness.
 
@@ -168,5 +178,6 @@ Consider the demo complete only when:
 - the major screens have a clear visual center;
 - mock data and states are coherent;
 - the UI is consistent and responsive enough for the scoped review;
+- typography passes the mandatory readability audit, including normal-zoom browser inspection when a runnable UI exists;
 - the runnable result has been checked in a browser when code exists;
 - the handoff states what is real, mocked, assumed, verified, and not production-ready.

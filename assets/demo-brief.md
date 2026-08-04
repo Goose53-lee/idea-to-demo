@@ -55,6 +55,10 @@ Entry → Find → Inspect → Act → Feedback → Updated state
 - Brand or visual constraints:
 - Reference patterns to reuse:
 - Reference details not to copy:
+- Typography roles: page title / section title / body / support / eligible 11px annotations:
+- Target reading context: desktop / mobile / distance-viewed display:
+- Typography tokens or existing project type system to reuse:
+- Density risks and layout-first response:
 
 ## Data and interactions
 
@@ -82,4 +86,5 @@ Entry → Find → Inspect → Act → Feedback → Updated state
 - Desktop viewport:
 - Narrow viewport:
 - Error or empty state:
+- Typography readability audit at normal zoom:
 - Known gaps:
