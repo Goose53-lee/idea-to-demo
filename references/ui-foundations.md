@@ -74,6 +74,29 @@ Shadow: none by default; light shadow for floating layers
 
 Use one consistent icon library. Keep size, stroke, and visual weight consistent. Colored icon plates may aid recognition, but do not assign random colors without meaning.
 
+### Refined admin styling
+
+For polished admin and commerce-operation demos, refinement should come from precision, not decoration.
+
+Use:
+
+- a calm blue-and-white or neutral-light base when it fits the business context;
+- one primary accent plus semantic status colors;
+- crisp 1px borders, stable radii, subtle hover/focus states, and restrained shadows only for raised layers;
+- soft tinted backgrounds for selected navigation, active filters, alerts, and priority tasks;
+- icon plates or light dimensional icons only when they improve recognition of modules such as store, order, visitor, transaction, content, or risk;
+- compact but breathable module spacing so the first viewport shows both summary and next action.
+
+Avoid:
+
+- turning every metric into an equal card with the same emphasis;
+- decorative glass panels, heavy blur, glow, large gradients, or fake 3D surfaces as the main style;
+- using blue everywhere without semantic contrast;
+- random icon colors unrelated to business meaning;
+- visual effects that make data, tables, filters, or actions harder to scan.
+
+Polished first screens usually combine a clear shell, a dominant metric or trend area, concise status strips, and a limited supporting rail. The user should understand what changed, what is risky, and what to do next without reading explanatory marketing copy.
+
 ## Mandatory typography and readability
 
 Apply this section to UI design decisions, design/image-generation prompts, visual specifications, CSS or Tailwind output, component-library work, and browser verification. These are mandatory constraints unless the user explicitly supplies a stricter product standard.
@@ -256,6 +279,14 @@ Metric → trend or category → filtered records → object detail
 ```
 
 Avoid 3D charts, decorative gauges, too many pies, and charts with no decision or action attached.
+
+For commerce and shop-operation metrics, prefer relationships that explain the business funnel:
+
+```text
+Traffic → product views → clicks → orders → paid amount → refunds or after-sales → repeat purchase
+```
+
+Keep visitor, transaction, conversion, fulfillment, content, and risk metrics distinguishable. Do not merge them into one vague "growth" score unless the source product defines that score. Pair every comparison with direction and meaning, such as whether an increase is good, bad, or needs attention.
 
 ## Images and industry expression
 

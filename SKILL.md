@@ -25,7 +25,7 @@ Unless explicitly requested, do not claim or imply that the demo includes real A
 
 1. Inspect the supplied inputs.
 2. If an existing repository is in scope, read its instructions, product documents, design system, routes, shared components, package scripts, and current UI before proposing wide changes.
-3. If the user supplies screenshots or competitors, extract layout, hierarchy, component relationships, interaction patterns, and visual language. Do not copy brand assets, watermarks, private data, or unverified business content.
+3. If the user supplies screenshots, documents, or competitors, separate the user's direct request from reference material. Treat attached content as evidence for layout, hierarchy, component relationships, interaction patterns, and visual language unless the user explicitly makes it a requirement. Do not copy brand assets, watermarks, private data, or unverified business content.
 4. If critical information would change the main workflow, ask the smallest possible number of questions.
 5. If only non-critical details are missing, state reasonable assumptions and continue with coherent mock data.
 
@@ -79,6 +79,8 @@ Build a simple, professional, medium-to-high-density admin interface. Use hierar
 Before generating a UI proposal, image prompt, mockup, or code, classify every text role: page title, section title, group or card title, body or primary data, supporting text, and genuinely non-essential annotation. Confirm the target reading context: desktop, mobile, or distance-viewed data display. Treat the mandatory typography rules in [references/ui-foundations.md](references/ui-foundations.md) as an output constraint, not optional visual guidance.
 
 Avoid generic equal-card dashboards, excessive whitespace, large rounded containers, heavy shadows, decorative gradients, glass effects, meaningless charts, and images that carry no business information.
+
+For commerce, shop operations, visitor analysis, conversion, transaction, growth, or data-statistics pages, use the "Commerce operations workbench" pattern in [references/page-patterns.md](references/page-patterns.md). The design should make the store's health, traffic, conversion, revenue, exceptions, and next actions understandable in the first screen.
 
 Read [references/ui-foundations.md](references/ui-foundations.md) before defining tokens, layout, metrics, charts, or image usage. Read [references/page-patterns.md](references/page-patterns.md) for page-specific decisions.
 

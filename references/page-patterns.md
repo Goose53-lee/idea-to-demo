@@ -33,6 +33,57 @@ Limit top metrics to four to six useful values. Keep one dominant flow, object, 
 
 A data dashboard supports judgment and analysis. Organize it as title and range, core metrics, exceptions, primary trend or process, composition, rankings, detail, and data definitions. Do not confuse it with a shortcut-heavy workbench.
 
+### Commerce operations workbench
+
+Use this pattern for shop homepages, platform seller consoles, visitor analysis, transaction statistics, search analysis, growth centers, and data-statistics pages.
+
+The first screen should answer:
+
+- Is the store healthy today?
+- Where did traffic come from?
+- Which step of the funnel is improving or leaking?
+- What transactions, after-sales, violations, or tasks need attention?
+- Which action should the operator take next?
+
+Common structure:
+
+```text
+Global shell and search
+Store or account scope, time range, and update time
+Top KPI strip for pending work, traffic, conversion, orders, revenue, after-sales, or risk
+Main analytics area: funnel, trend, ranking, or comparison
+Operational queue: todos, warnings, campaign tasks, growth suggestions, or service exceptions
+Detailed records or drill-down list
+```
+
+Use the module set according to the user's goal:
+
+- **Store overview:** pending orders, shipment, after-sales, violations, rating, guarantee/deposit, active campaigns, and next actions.
+- **Visitor analysis:** visitors, page views, source channels, product views, search words, new versus returning visitors, and retention or revisit signals.
+- **Transaction statistics:** paid orders, paid amount, conversion rate, customer unit price, refund or after-sales rate, unpaid risk, and period comparison.
+- **Search or content analysis:** search terms, hot keywords, ranking changes, video or content exposure, click-through, and related products.
+- **Growth tasks:** current level, gap to target, recommended action, reward or impact, due date, and completion state.
+
+Design rules:
+
+- Put four to six critical KPIs at the top; make one or two primary values visibly stronger than secondary values.
+- Keep time range, comparison basis, and metric definitions close to the chart or KPI they affect.
+- Use tabs or segmented controls for business modes such as overall transaction, self-operated transaction, cooperative transaction, hot keywords, or hot videos.
+- Use line charts for trend, bars for ranking or distribution, progress for goal completion, and tables for actionable records.
+- Show comparison direction with both color and text; a rising refund, complaint, violation, or timeout rate is negative.
+- Attach actions to insights: view details, handle after-sales, publish content, register campaign, optimize product, download details, or clear filters.
+- Keep right rails for short todos, risk alerts, campaign reminders, and growth tasks. Move complex analysis into the main area.
+- Use realistic platform data relationships instead of random dashboard numbers. Totals, percentages, and trend labels must reconcile.
+- On mobile, keep the top health summary and one primary action first, then convert charts to compact summaries and records to cards.
+
+Avoid:
+
+- a static "data wall" that has metrics but no decision or next action;
+- unrelated charts that do not connect to traffic, conversion, transaction, service, content, or risk;
+- copying platform names, logos, watermarks, or exact private values from references;
+- hiding important metric definitions or update times;
+- using visual polish to obscure low contrast, tiny text, cramped tables, or unclear state meaning.
+
 ## Lists and tables
 
 Use the stable sequence:
