@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea to Demo"
+  short_description: "Turn rough ideas into focused demos and component comparisons"
+  default_prompt: "Use $idea-to-demo to build the smallest runnable demo that can validate this idea, flow, or component choice."
